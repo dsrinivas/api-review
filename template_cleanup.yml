@@ -1,0 +1,17 @@
+---
+- name: Using the uri module to delete a Job Template
+  hosts: tower
+  gather_facts: false
+
+  tasks:
+    - name: Delete an existing Ansible Tower Job Template using the uri module
+      uri:
+        url: ...
+        validate_certs: no
+        method: ...
+        return_content: yes
+        force_basic_auth: yes
+        user: ...
+        password: ...
+        status_code: 204
+...
